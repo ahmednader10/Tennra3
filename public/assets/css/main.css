@@ -1,0 +1,95 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+.leftHalf {
+   width: 49.8%;
+   position: static;
+   background-size: cover;
+   left: 5px;
+   height: 484px;
+   background-repeat: no-repeat;
+   float:left;
+   overflow: hidden;
+
+
+}
+img:hover { 
+    -moz-transform:translate(0,-1em);
+    -o-transform:translate(0,-1em);
+    -webkit-transform:translate(0,-1em);
+    opacity:0.7;
+}
+
+img:active {
+    -moz-transform:translate(0,-1em) rotate(10deg);
+    -o-transform:translate(0,-1em) rotate(10deg);
+    -webkit-transform:translate(0,-1em) rotate(10deg);
+}
+
+.animate {
+    -moz-transition:all .5s ease-in-out 0s;
+    -o-transition:all .5s ease-in-out 0s;
+    -webkit-transition:all .5s ease-in-out 0s;
+}
+.rightHalf {
+   width: 49.8%;
+   position: static;
+   background-size: cover;
+   right:5px;
+   height: 501px;
+   background-repeat: no-repeat;
+   float:right;
+   overflow: hidden;
+}
+
+.jumbotron {
+  background-image:url('http://goo.gl/04j7Nn');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.container main {
+  background-color: #f7f7f7;
+}
+
+
