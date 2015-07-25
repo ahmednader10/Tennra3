@@ -3,32 +3,31 @@
 
 @section('content')
 
-<button style="background-color:#3366FF " type="button" class="btn btn-default" onclick="window.location='{{ route("project.create") }}'">Create Project</button>
-<h1> Projects </h1>
 
-<table class="table table-hover">
-		<thead>
-			<tr>
-				<th>Project Name</th>
-				<th>Description</th>
-				<th>Video Url</th>
-				<th>Funding Goal</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach ($projects as $project)
-				<tr>
-				<td>{{$project -> name}}</td>
-				<td>{{$project -> description}}</td>
-				<td>{{$project -> video}}</td>
-				<td>{{$project -> goal}}</td>
-				</tr>
-			@endforeach
-		</tbody>
-	</table>
+   
+  <body>
 
 
-	
+    <div class="leftHalf">
+     <a href="#"> <img class="animate" src="http://s3.postimg.org/6azz3w3j7/backers_1.jpg"/></a>
+    </div> 
+
+        <div class="rightHalf">
+     <a href="#"> <img src="http://s9.postimg.org/hgwjzg9rj/backers_3.jpg" /> </a>
+        
+      </div>
+    </div> 
+    <hr/>
+     
+    <div class="learn-more">
+	  <div class="container">
+		<div class="row">
+	      
+	    </div>
+	  </div>
+	</div>
+  </body>
+
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -41,3 +40,5 @@
 
 
 @stop
+
+	

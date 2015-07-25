@@ -9,7 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,17 +18,29 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="background-color:#C8C8C8 "  >
-  
+  <header>
     @include('partials.header')
-    
-    <main>
-    	@yield('content')
-    </main>
+  </header>
+  <body>
+    <div class="nav">
+    <div class="container">
+      <ul>
+        <li class="pull-left"> <h4>Tennra</h4></li>
+          <li class="pull-right"><a href="#">Sign Up</a></li>
+          <li class="pull-right"><a href="#">Log In</a></li>
+          <li class="pull-right"><a href="#">Help</a></li>
+        </ul>
+      </div>
+      </div>
 
-    <footer>
-    	
-    </footer>
+      <div class="container">
+      <main>
+       @yield('content')
+      </main>
+      </div>
+    
+  <footer>    
+  </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
