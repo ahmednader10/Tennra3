@@ -21,6 +21,18 @@ class ProjectsController extends Controller
         return view('indexProject', compact('projects')); 
     }
 
+    public function like($id)
+    {
+        $project = Project::find($id);
+        if(is_null($project)){
+            abort(404);
+        }
+        
+        $project->likes+= (int) 1;
+        $project->save();
+        return view('showProject',compact('project'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

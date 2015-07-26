@@ -1,12 +1,42 @@
 .nav a {
-  color: #5a5a5a;
-  font-size: 11px;
+  color: #659D32;
+  font-size: 13px;
   font-weight: bold;
-  padding: 14px 10px;
+  padding: 10px 10px 10px 10px;
   text-transform: uppercase;
+
+  
 }
 
+
+.footer {
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  text-align: left;
+  vertical-align: text-bottom;
+  
+}
+.footer li {
+
+  display: inline;
+}
+.footer img{
+
+  padding-bottom: 0cm;
+}
+.nav a:hover:after {
+    content: "";
+    border-bottom: 2px solid #ec6713;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+}
+.nav{
+  line-height: 50px;
+}
 .nav li {
+
   display: inline;
 }
 .leftHalf {
@@ -19,21 +49,38 @@
    float:left;
    overflow: hidden;
 
+}
+
+img {
+
+  padding-bottom: 0.5cm;
 
 }
-img:hover { 
+.leftHalf img:hover { 
     -moz-transform:translate(0,-1em);
     -o-transform:translate(0,-1em);
     -webkit-transform:translate(0,-1em);
     opacity:0.7;
 }
 
-img:active {
+.leftHalf img:active {
     -moz-transform:translate(0,-1em) rotate(10deg);
     -o-transform:translate(0,-1em) rotate(10deg);
     -webkit-transform:translate(0,-1em) rotate(10deg);
 }
 
+.rightHalf img:hover { 
+    -moz-transform:translate(0,-1em);
+    -o-transform:translate(0,-1em);
+    -webkit-transform:translate(0,-1em);
+    opacity:0.7;
+}
+
+.rightHalf img:active {
+    -moz-transform:translate(0,-1em) rotate(10deg);
+    -o-transform:translate(0,-1em) rotate(10deg);
+    -webkit-transform:translate(0,-1em) rotate(10deg);
+}
 .animate {
     -moz-transition:all .5s ease-in-out 0s;
     -o-transition:all .5s ease-in-out 0s;

@@ -16,3 +16,4 @@ Route::get('project/create', array('uses' => 'ProjectsController@create', 'as' =
 Route::post('/','ProjectsController@store');
 Route::get('projects', 'ProjectsController@index');
 Route::get('/projects/{id}','ProjectsController@show');
+Route::get('projects/{id}', 'ProjectsController@like');
