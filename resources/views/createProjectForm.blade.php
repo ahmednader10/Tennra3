@@ -2,6 +2,7 @@
 
 @section('content')
 
+<body>
 {!! Form::open(['url' =>'/']) !!}
 <table>
 <tr>
@@ -46,7 +47,8 @@
 </tr>
 
 
-
+</table>
+	</body>
 
 {!! Form::close() !!}
 
@@ -58,6 +60,7 @@
  	</ul>
  	@endif
 
+ 
 @stop
 
 

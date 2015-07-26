@@ -6,9 +6,16 @@
 <hr/>
 	@foreach($projects as $project)
 		<project>
-			<h2>
-				<a href="{{ url('/projects/'.$project->id.'/') }}"> {{ $project->name}}</a>
-			</h2>
+
+
+			<div class="col-md-4">
+			<h3>{{ $project->name}}</h3>
+			<img src="http://s3.postimg.org/6azz3w3j7/backers_1.jpg" height="200" width="200"/>
+			<p>{{ substr($project->description,0, 100)}}...</p>
+			<p><a href="{{ url('/projects/'.$project->id.'/') }}">Learn more</a> 
+		  </div>
 		</project>
 	@endforeach
 @stop
+
+		

@@ -25,10 +25,13 @@
     <div class="nav">
     <div class="container">
       <ul>
-        <li class="pull-left"> <h4>Tennra</h4></li>
-          <li class="pull-right"><a href="#">Sign Up</a></li>
-          <li class="pull-right"><a href="#">Log In</a></li>
-          <li class="pull-right"><a href="#">Help</a></li>
+        <li class="pull-left"> 
+        <a href="{{ url('/')  }}">
+        <img src="http://s13.postimg.org/xuft29ljn/mail_google_com.png" height="60" width="100"/img>
+        </li></a>
+          <li class="pull-right"><a href="{{ url('/project/create') }}">Start</a></li>
+          <li class="pull-right"><a href="{{ url('/projects/') }}">Discover</a></li>
+          <li class="pull-right"><a href="{{ url('/') }}">Home</a></li>
         </ul>
       </div>
       </div>
@@ -38,15 +41,17 @@
        @yield('content')
       </main>
       </div>
-    
-  <footer>    
+  </body>
+
+  <footer padding-top="60px">    
+  @include('partials.footer')
   </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/assets/js/bootstrap.min.js"></script>
 
-  </body>
+
 
 </html>
 
