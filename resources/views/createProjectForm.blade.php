@@ -3,7 +3,7 @@
 @section('content')
 
 <body>
-{!! Form::open(['url' =>'/']) !!}
+{!! Form::open(['url' =>'projects']) !!}
 <table>
 <tr>
 	<td>{!! Form::label('Project Name') !!}</td>
@@ -49,6 +49,7 @@
 
 </table>
 	</body>
+
 
 {!! Form::close() !!}
 

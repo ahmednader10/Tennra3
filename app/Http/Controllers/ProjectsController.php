@@ -57,7 +57,7 @@ class ProjectsController extends Controller
        // $projects = Request::all();
         Project::create($request->all());
        
-        return redirect('/');
+        return redirect('/projects');
     }
 
     /**
