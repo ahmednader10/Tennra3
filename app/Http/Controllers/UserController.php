@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use DB;
+use Illuminate\Http\Request;
 use App\Project;
-//use App\Http\Requests;
+use App\User;
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Request;
+use Illuminate\Contracts\Validation\ValidationException;
+
 
 
 class UserController extends Controller
@@ -16,11 +19,35 @@ class UserController extends Controller
         return view('users.createUser');
     }
 
-    public function store(Request $request)
+    public function store(CreateUserRequest $request)
     {
-        $this->validate($request, ['first name' => 'required' , 'last name' => 'required' , 'email' => 'required',
-        'password' => 'required']);
-        User::create($request->all());
+        User::create(Request::all());
+        echo 'You are successfully signed in. Welcome to our platform!';
         return redirect('/');
+    }
+
+    /*public function show($id)
+    {
+        $user = Project::find($id);
+        if(is_null($user)){
+            abort(404);
+        }
+        return view('showUser',compact('users'));
+    } */
+
+    public function signIn($email, $password)
+    {
+        $user = DB::table('users')
+            ->where('password', '=', $password)->get()
+            ->andWhere('email', '=', $email)
+            ->get();
+        if ($user != null) {
+            echo 'You are now signed in';
+            return redirect('/');
+        }
+        else {
+            echo 'Incorrect email or password! Please resubmit';
+            return redirect('/users/signIn');
+        }
     }
 }

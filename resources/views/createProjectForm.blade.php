@@ -44,6 +44,7 @@
 <tr colspan='2'>	
 <td><input type="submit" class="btn btn-info" value="Submit Project"> </td>
 </tr>
+</table>
 
 
 

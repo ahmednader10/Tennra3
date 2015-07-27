@@ -63,6 +63,31 @@ class ProjectsController extends Controller
         return view('showProject',compact('project'));
     }
 
+    public function like($id)
+    {
+        $project = Project::find($id);
+        if(is_null($project)){
+            abort(404);
+        }
+
+        $project->likes+= (int) 1;
+        $project->save();
+        return view('showProject',compact('project'));
+    }
+
+    public function pledge($id, $pledgeAmount)
+    {
+        $project = Project::find($id);
+        if(is_null($project)){
+            abort(404);
+        }
+
+        $project->pledgeAmount+=(int)$pledgeAmount;
+        $project->goal-=(int)$pledgeAmount;
+        $project->save();
+        return view('/projects');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

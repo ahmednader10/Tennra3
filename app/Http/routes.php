@@ -16,3 +16,10 @@ Route::get('project/create', array('uses' => 'ProjectsController@create', 'as' =
 Route::post('/','ProjectsController@store');
 Route::get('projects', 'ProjectsController@index');
 Route::get('/projects/{id}','ProjectsController@show');
+Route::get('/projects/{id}','ProjectsController@pledge');
+
+Route::get('users/createUser', 'UserController@create');
+Route::post('users', 'UserController@store');
+Route::get('users/signIn', 'UserController@signIn');
+
+
